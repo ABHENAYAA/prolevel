@@ -1,51 +1,30 @@
+
 #include <stdio.h>
-int main(void) 
+void main ()
 {
-int n,i;
-int j=0,b[100],a[100];
-scanf("%d",&n);
-for(i=0;i<n;i++)
-scanf("%d",&a[i]);
-for(i=0;i<n;i++)
-{
-	int t=a[i],c=0;
-	while(t)
-	{
-		int rem=t%2;
-		t=t/2;
-		c++;
+    int number[30];
+    int i, j, a, n;
+    printf("Enter the value of N\n");
+    scanf("%d", &n);
+    printf("Enter the numbers \n");
+    for (i = 0; i < n; ++i)
+    scanf("%d", &number[i]);
+
+    /*  sorting begins ... */
+    for (i = 0; i < n; ++i)
+    {
+        for (j = i + 1; j < n; ++j)
+        {
+            if (number[i] < number[j])
+            {
+                a = number[i];
+                number[i] = number[j];
+                number[j] = a;
+            }
+        }    }
+  printf("The numbers arranged in descending order are given below\n");
+    for (i = 0; i < n; ++i)
+    {
+        printf("%d\n", number[i]);
     }
-    b[j++]=c;
- 
-}
-for(i=0;i<n;i++)
-{
-	for(j=0;j<n;j++)
-	{
-		if(b[i]>b[j])
-		{
-			int temp=b[i];
-			b[i]=b[j];
-			b[j]=temp;
-			temp=a[i];
-			a[i]=a[j];
-			a[j]=temp;
-		}
-		else if(b[i]==b[j])
-		{
-			if(a[i]>a[j])
-		{
-			int temp=b[i];
-			b[i]=b[j];
-			b[j]=temp;
-			temp=a[i];
-			a[i]=a[j];
-			a[j]=temp;
-		}	
-		}
-	}
-}
-for(i=0;i<n;i++)
-printf("%d",a[i]);
-return 0;
 }
