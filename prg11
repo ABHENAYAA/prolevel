@@ -1,20 +1,33 @@
-#include<stdio.h>
-#include<conio.h>
-void main()
-{
-int a,n,i,j,count=0;
-scanf("%d",&a);
-n=2*a;
-for(i=1;i<n;i++)
-{
-for(j=i+1;j<=n;j++)
-{
-printf("(%d,%d)\n",i,j);
-count++;
-}
-}
-printf("No of paires =%d",count);
-getch();
-}
+include <stdio.h>
+int main(){
+    char c;
+        	int i,j,n,noc,nod,asc=97,days;;
+	    	char name[100];
+	        printf("Enter the value n ");
+		scanf("%d",&n);        
+		 noc=2*n;
+		nod=noc-1;
+		     
+		  /* Assigning the name for each child */
+		    for(i=0;i<noc;i++)
+		       	{
+				name[i]=asc;
+				asc++;
+			}
+								  
+			 days=nod;
+			 j=2*n-1;
+			
+			 while(days!=0)
+			 {
+				printf("\n The children pairs for day %d",days);
+				/* prints the pairs for the various days */
+				for(int i=0;i<2*n;i++)
+				{
+					printf("\n %c %c",name[i],name[j]);
+					j--;
+				}
+																													    	
+
 
 
