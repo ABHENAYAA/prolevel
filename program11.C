@@ -2,7 +2,9 @@
 #include<conio.h>
 void main()
 {
-int a,n,i,j,count=0;
+int a,n,i,j;
+int count=0;
+printf("\n Enter value=");
 scanf("%d",&a);
 n=2*a;
 for(i=1;i<n;i++)
